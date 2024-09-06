@@ -1,7 +1,7 @@
 function validateUserInput (req, res, next) {
-  const { username, password } = req.body
-  if (!username || !password) {
-    return res.status(400).send('Missing required fields: username and password')
+  const { name, password } = req.body
+  if (!name || !password) {
+    return res.status(400).send('Missing required fields: name and password')
   }
   next()
 }

@@ -2,8 +2,9 @@ import {celebrate, Joi, Segments} from 'celebrate'
 
 const userScheme = Joi.object({
     name: Joi.string().min(2).max(30).required(),
+    password: Joi.string().min(2).max(20).required(),
     email: Joi.string().email().required(),
-    age: Joi.number().integer().min(18).max(120).required()
+    age: Joi.number().integer().min(18).max(120)
 })
 
 const validateUserPost = celebrate({

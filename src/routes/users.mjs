@@ -13,7 +13,9 @@ import validateUserInput from '../middlewares/validateUserInput.mjs'
 
 const usersRouter = Router()
 
-usersRouter.route('/').get(getUsersHandler).post(validateUserInput, validateUserPost,  postUsersHandler)
+usersRouter.route('/')
+  .get(getUsersHandler)
+  .post(validateUserInput, validateUserPost,  postUsersHandler)
 
 usersRouter
     .route('/:userId')
